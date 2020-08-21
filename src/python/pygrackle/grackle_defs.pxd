@@ -40,6 +40,11 @@ cdef extern from "grackle_chemistry_data.h":
         int Compton_xray_heating
         int LWbackground_sawtooth_suppression
         double LWbackground_intensity
+        int hom_radiation_tmox
+        double hom_H2_rate
+        double hom_HM_rate
+        double hom_H2p_rate
+        int local_radiation_tmox
         double UVbackground_redshift_on
         double UVbackground_redshift_off
         double UVbackground_redshift_fullon

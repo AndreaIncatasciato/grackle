@@ -116,6 +116,11 @@ c     This is the fortran definition of grackle_chemistry_dadta
          INTEGER(C_INT) :: Compton_xray_heating
          INTEGER(C_INT) :: LWbackground_sawtooth_suppression
          REAL(C_DOUBLE) :: LWbackground_intensity
+         INTEGER(C_INT) :: hom_radiation_tmox
+         REAL(C_DOUBLE) :: hom_H2_rate
+         REAL(C_DOUBLE) :: hom_HM_rate
+         REAL(C_DOUBLE) :: hom_H2p_rate
+         INTEGER(C_INT) :: local_radiation_tmox
          REAL(C_DOUBLE) :: UVbackground_redshift_on
          REAL(C_DOUBLE) :: UVbackground_redshift_off
          REAL(C_DOUBLE) :: UVbackground_redshift_fullon

@@ -231,15 +231,22 @@ int update_UVbackground_rates(chemistry_data *my_chemistry,
   my_uvb_rates->piHeII *= Ramp;
   my_uvb_rates->piHeI *= Ramp;
 
-  /* Molecular hydrogen constant photo-dissociation */
+  /* Molecular hydrogen constant photo-dissociation and associated reactions */
 
-  /* Note that k31 can be set by above by the UV background table, in
-     which case it is overwritten here if (LWbackground_intensity >
+  /* Note that k31, k27 and k28 can be set by the UV background table,
+     in which case they are overwritten here if (LWbackground_intensity >
      0.0). */
 
   if (my_chemistry->LWbackground_intensity > 0.0) 
-    my_uvb_rates->k31 += 1.38e-12 * my_chemistry->LWbackground_intensity *
+    my_uvb_rates->k31 = 1.38e-12 * my_chemistry->LWbackground_intensity *
       my_units->time_units;
+
+  /* this is the tmox homogeneous LW background */
+  if (my_chemistry->hom_radiation_tmox) {
+    my_uvb_rates->k31 = my_chemistry->hom_H2_rate * my_units->time_units;
+    my_uvb_rates->k27 = my_chemistry->hom_HM_rate * my_units->time_units;
+    my_uvb_rates->k28 = my_chemistry->hom_H2p_rate * my_units->time_units;
+  }
   
   /* LWbackground_sawtooth_suppression is supposed to account for the
      suppression of LW flux due to Lyman-series absorption (giving a

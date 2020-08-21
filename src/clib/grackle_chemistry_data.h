@@ -108,6 +108,13 @@ typedef struct
   int Compton_xray_heating;
   int LWbackground_sawtooth_suppression;
   double LWbackground_intensity;   // [in units of 10^21 erg/s/cm^2/Hz/sr]
+  /* tmox stuff */
+  int hom_radiation_tmox;          // bool: are we considering an homogeneous background?
+  double hom_H2_rate;              // homogeneous background given as input -> 3 rates
+  double hom_HM_rate;
+  double hom_H2p_rate;
+  int local_radiation_tmox;        // bool: are we considering local radiation?
+  /* end tmox */
   double UVbackground_redshift_on;
   double UVbackground_redshift_off;
   double UVbackground_redshift_fullon;

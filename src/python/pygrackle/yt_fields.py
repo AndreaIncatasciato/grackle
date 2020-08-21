@@ -50,6 +50,11 @@ _parameter_map[EnzoDataset] = {
     "Compton_xray_heating": "Compton_xray_heating",
     "LWbackground_intensity": "LWbackground_intensity",
     "LWbackground_sawtooth_suppression": "LWbackground_sawtooth_suppression"
+    "hom_radiation_tmox": "HomogeneousLWbackgroundTMoX"
+    "hom_H2_rate": "HomogeneousLWbackgroundTMoX_H2"
+    "hom_HM_rate": "HomogeneousLWbackgroundTMoX_HM"
+    "hom_H2p_rate": "HomogeneousLWbackgroundTMoX_H2p"
+    "local_radiation_tmox": "LocalLWradTMoX"
 }
 
 _field_map = {
