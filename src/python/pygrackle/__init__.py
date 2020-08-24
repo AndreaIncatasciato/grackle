@@ -21,6 +21,7 @@ from .utilities.convenience import \
     setup_fluid_container
 
 from .utilities.evolve import \
+    calculate_collapse_factor, \
     evolve_constant_density, \
     evolve_freefall
 
