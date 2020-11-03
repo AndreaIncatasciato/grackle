@@ -75,6 +75,14 @@ chemistry_data _set_default_chemistry_parameters(void)
   my_chemistry.LWbackground_intensity = 0.0;   // [in units of 10^21 erg/s/cm^2/Hz/sr]
   my_chemistry.LWbackground_sawtooth_suppression = 0;
 
+  /* tmox stuff */
+  my_chemistry.hom_radiation_tmox     = 0;
+  my_chemistry.hom_H2_rate            = 0.0;
+  my_chemistry.hom_HM_rate            = 0.0;
+  my_chemistry.hom_H2p_rate           = 0.0;
+  my_chemistry.local_radiation_tmox   = 0;
+  /* end tmox */
+
   my_chemistry.HydrogenFractionByMass       = 0.76;
   /* The DToHRatio is by mass in the code, so multiply by 2. */
   my_chemistry.DeuteriumToHydrogenRatio     = 2.0*3.4e-5; // Burles & Tytler 1998

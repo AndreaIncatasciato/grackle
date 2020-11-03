@@ -251,6 +251,36 @@ cdef class chemistry_data:
         def __set__(self, val):
             self.data.LWbackground_intensity = val
 
+    property hom_radiation_tmox:
+        def __get__(self):
+            return self.data.hom_radiation_tmox
+        def __set__(self, val):
+            self.data.hom_radiation_tmox = val
+
+    property hom_H2_rate:
+        def __get__(self):
+            return self.data.hom_H2_rate
+        def __set__(self, val):
+            self.data.hom_H2_rate = val
+
+    property hom_HM_rate:
+        def __get__(self):
+            return self.data.hom_HM_rate
+        def __set__(self, val):
+            self.data.hom_HM_rate = val
+
+    property hom_H2p_rate:
+        def __get__(self):
+            return self.data.hom_H2p_rate
+        def __set__(self, val):
+            self.data.hom_H2p_rate = val
+
+    property local_radiation_tmox:
+        def __get__(self):
+            return self.data.local_radiation_tmox
+        def __set__(self, val):
+            self.data.local_radiation_tmox = val
+
     property UVbackground_intensity:
         def __get__(self):
             return self.data.UVbackground_intensity

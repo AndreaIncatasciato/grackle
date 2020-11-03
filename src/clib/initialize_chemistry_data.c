@@ -463,6 +463,16 @@ void show_parameters(FILE *fp, chemistry_data *my_chemistry)
           my_chemistry->LWbackground_sawtooth_suppression);
   fprintf(fp, "LWbackground_intensity            = %g\n",
           my_chemistry->LWbackground_intensity);
+  fprintf(fp, "hom_radiation_tmox                = %d\n",
+          my_chemistry->hom_radiation_tmox);
+  fprintf(fp, "hom_H2_rate                       = %g\n",
+          my_chemistry->hom_H2_rate);
+  fprintf(fp, "hom_HM_rate                       = %g\n",
+          my_chemistry->hom_HM_rate);
+  fprintf(fp, "hom_H2p_rate                      = %g\n",
+          my_chemistry->hom_H2p_rate);
+  fprintf(fp, "local_radiation_tmox              = %d\n",
+          my_chemistry->local_radiation_tmox);
   fprintf(fp, "UVbackground_redshift_on          = %g\n",
           my_chemistry->UVbackground_redshift_on);
   fprintf(fp, "UVbackground_redshift_off         = %g\n",
